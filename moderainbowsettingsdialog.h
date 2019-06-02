@@ -15,6 +15,9 @@ public:
     explicit ModeRainbowSettingsDialog(QWidget *parent = nullptr);
     ~ModeRainbowSettingsDialog();
 
+private slots:
+    void on_bExit_clicked();
+
 private:
     Ui::ModeRainbowSettingsDialog *ui;
 };

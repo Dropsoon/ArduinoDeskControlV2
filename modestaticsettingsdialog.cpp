@@ -12,3 +12,8 @@ ModeStaticSettingsDialog::~ModeStaticSettingsDialog()
 {
     delete ui;
 }
+
+void ModeStaticSettingsDialog::on_bExit_clicked()
+{
+    close();
+}

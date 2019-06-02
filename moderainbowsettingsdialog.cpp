@@ -12,3 +12,8 @@ ModeRainbowSettingsDialog::~ModeRainbowSettingsDialog()
 {
     delete ui;
 }
+
+void ModeRainbowSettingsDialog::on_bExit_clicked()
+{
+    close();
+}

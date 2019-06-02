@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>414</width>
+    <width>449</width>
     <height>266</height>
    </rect>
   </property>
@@ -29,16 +29,13 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QComboBox" name="cSelectPort">
-         <item>
-          <property name="text">
-           <string>COM0</string>
-          </property>
-         </item>
-        </widget>
+        <widget class="QComboBox" name="cSelectPort"/>
        </item>
        <item row="1" column="1">
         <widget class="QPushButton" name="bConnect">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Połącz</string>
          </property>
@@ -82,32 +79,60 @@
       <property name="title">
        <string>Wybierz tryb</string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QPushButton" name="bModeStatic">
-         <property name="text">
-          <string>Statyczny</string>
-         </property>
-        </widget>
-       </item>
-       <item>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="0">
         <widget class="QPushButton" name="bModeRainbow">
          <property name="text">
           <string>Tęcza</string>
          </property>
         </widget>
        </item>
-       <item>
+       <item row="2" column="0">
         <widget class="QPushButton" name="bModeMusicSync">
          <property name="text">
           <string>Synchronizacja z muzyką</string>
          </property>
         </widget>
        </item>
-       <item>
+       <item row="3" column="0">
         <widget class="QPushButton" name="bModeCustom">
          <property name="text">
           <string>Własny</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="bModeStatic">
+         <property name="text">
+          <string>Statyczny</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QToolButton" name="bModeStaticSettings">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QToolButton" name="bModeRainbowSettings">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QToolButton" name="bModeMusicSyncSettings">
+         <property name="text">
+          <string>...</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QToolButton" name="bModeCustomSettings">
+         <property name="text">
+          <string>...</string>
          </property>
         </widget>
        </item>
@@ -121,7 +146,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>414</width>
+     <width>449</width>
      <height>21</height>
     </rect>
    </property>

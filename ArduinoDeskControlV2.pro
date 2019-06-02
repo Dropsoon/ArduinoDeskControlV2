@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -26,13 +26,34 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    ledsettingsdialog.cpp \
+    controlersettingsdialog.cpp \
+    applicationsettingsdialog.cpp \
+    modestaticsettingsdialog.cpp \
+    moderainbowsettingsdialog.cpp \
+    modemusicsyncsettingsdialog.cpp \
+    modecustomsettingsdialog.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    ledsettingsdialog.h \
+    controlersettingsdialog.h \
+    applicationsettingsdialog.h \
+    modestaticsettingsdialog.h \
+    moderainbowsettingsdialog.h \
+    modemusicsyncsettingsdialog.h \
+    modecustomsettingsdialog.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    ledsettingsdialog.ui \
+    controlersettingsdialog.ui \
+    applicationsettingsdialog.ui \
+    modestaticsettingsdialog.ui \
+    moderainbowsettingsdialog.ui \
+    modemusicsyncsettingsdialog.ui \
+    modecustomsettingsdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

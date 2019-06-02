@@ -15,6 +15,9 @@ public:
     explicit ModeStaticSettingsDialog(QWidget *parent = nullptr);
     ~ModeStaticSettingsDialog();
 
+private slots:
+    void on_bExit_clicked();
+
 private:
     Ui::ModeStaticSettingsDialog *ui;
 };
