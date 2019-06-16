@@ -3,6 +3,8 @@
 #include "moderainbowsettingsdialog.h"
 #include "modestaticsettingsdialog.h"
 
+#include <QSerialPortInfo>
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -11,12 +13,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QStringList List;
 
     //dodanie elementów do listy portów
-    QString tmp;
-    for(int i=0; i<32; i++){
-        tmp = "COM" + QString::number(i+1);
-        List << tmp;
+    QList<QSerialPortInfo> devices;
+    devices = QSerialPortInfo::availablePorts();
+    for(int i = 0; i < devices.count(); i++) {
+      ui->cSelectPort->addItem(devices.at(i).portName());
     }
-    ui->cSelectPort->addItems(List);
 
 }
 
@@ -99,4 +100,14 @@ void MainWindow::on_bSettingsApp_clicked()
 {
     uiapplicationsettings = new ApplicationSettingsDialog(this);
     uiapplicationsettings->show();
+}
+
+void MainWindow::on_bRefresh_clicked()
+{
+    ui->cSelectPort->clear();
+    QList<QSerialPortInfo> devices;
+    devices = QSerialPortInfo::availablePorts();
+    for(int i = 0; i < devices.count(); i++) {
+      ui->cSelectPort->addItem(devices.at(i).portName());
+    }
 }

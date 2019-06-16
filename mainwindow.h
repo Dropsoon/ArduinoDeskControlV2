@@ -50,6 +50,8 @@ private slots:
 
     void on_bSettingsApp_clicked();
 
+    void on_bRefresh_clicked();
+
 private:
     Ui::MainWindow *ui;
 
