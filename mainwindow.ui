@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>449</width>
-    <height>266</height>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -54,7 +54,7 @@
     <item row="1" column="0">
      <widget class="QGroupBox" name="groupBox_2">
       <property name="title">
-       <string>GroupBox</string>
+       <string>Ustawienia</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -96,6 +96,9 @@
        </item>
        <item row="2" column="0">
         <widget class="QPushButton" name="bModeMusicSync">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
          <property name="text">
           <string>Synchronizacja z muzyką</string>
          </property>

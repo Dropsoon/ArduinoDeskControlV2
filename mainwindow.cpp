@@ -106,6 +106,7 @@ void MainWindow::on_bRefresh_clicked()
 {
     ui->cSelectPort->clear();
     QList<QSerialPortInfo> devices;
+    devices.clear();
     devices = QSerialPortInfo::availablePorts();
     for(int i = 0; i < devices.count(); i++) {
       ui->cSelectPort->addItem(devices.at(i).portName());
