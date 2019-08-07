@@ -23,6 +23,9 @@
    </item>
    <item row="2" column="2">
     <widget class="QSlider" name="sRed">
+     <property name="maximum">
+      <number>255</number>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -37,6 +40,9 @@
    </item>
    <item row="4" column="2">
     <widget class="QSlider" name="sBlue">
+     <property name="maximum">
+      <number>255</number>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -72,6 +78,9 @@
    </item>
    <item row="3" column="2">
     <widget class="QSlider" name="sGreen">
+     <property name="maximum">
+      <number>255</number>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -92,7 +101,11 @@
     </widget>
    </item>
    <item row="2" column="6" rowspan="2" colspan="3">
-    <widget class="QWidget" name="wDisplayColor" native="true"/>
+    <widget class="QWidget" name="wDisplayColor" native="true">
+     <property name="autoFillBackground">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
@@ -109,8 +122,8 @@
      <y>16</y>
     </hint>
     <hint type="destinationlabel">
-     <x>394</x>
-     <y>22</y>
+     <x>407</x>
+     <y>30</y>
     </hint>
    </hints>
   </connection>
@@ -125,8 +138,8 @@
      <y>49</y>
     </hint>
     <hint type="destinationlabel">
-     <x>385</x>
-     <y>46</y>
+     <x>407</x>
+     <y>58</y>
     </hint>
    </hints>
   </connection>
@@ -141,8 +154,8 @@
      <y>72</y>
     </hint>
     <hint type="destinationlabel">
-     <x>374</x>
-     <y>76</y>
+     <x>407</x>
+     <y>87</y>
     </hint>
    </hints>
   </connection>
