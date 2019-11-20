@@ -33,7 +33,8 @@ SOURCES += \
     modestaticsettingsdialog.cpp \
     moderainbowsettingsdialog.cpp \
     modemusicsyncsettingsdialog.cpp \
-    modecustomsettingsdialog.cpp
+    modecustomsettingsdialog.cpp \
+    settings.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,7 +44,8 @@ HEADERS += \
     modestaticsettingsdialog.h \
     moderainbowsettingsdialog.h \
     modemusicsyncsettingsdialog.h \
-    modecustomsettingsdialog.h
+    modecustomsettingsdialog.h \
+    settings.h
 
 FORMS += \
         mainwindow.ui \
@@ -59,3 +61,5 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES +=

@@ -14,6 +14,7 @@
 #include "ledsettingsdialog.h"
 #include "controlersettingsdialog.h"
 #include "applicationsettingsdialog.h"
+#include "settings.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +31,8 @@ public:
     QSerialPort serial; //obiekt połączenia z kontrolerem
     QString sComSelected; //zmienna wybranego portu
     bool bConnected = false; //zmienna statusu połączenia
+    std::string settingsfilename = "settings.txt";
+    settings settingsf;
 
 private slots:
     void on_bConnect_clicked();

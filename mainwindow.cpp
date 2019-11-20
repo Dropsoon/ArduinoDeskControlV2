@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    settingsf.load_file(settingsfilename);
+
     QStringList List;
 
     //dodanie elementów do listy portów
