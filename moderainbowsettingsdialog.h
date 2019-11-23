@@ -14,9 +14,14 @@ class ModeRainbowSettingsDialog : public QDialog
 public:
     explicit ModeRainbowSettingsDialog(QWidget *parent = nullptr);
     ~ModeRainbowSettingsDialog();
+    int speed;
 
 private slots:
     void on_bExit_clicked();
+
+    void on_bSave_clicked();
+
+    void on_sSpeed_sliderMoved(int position);
 
 private:
     Ui::ModeRainbowSettingsDialog *ui;

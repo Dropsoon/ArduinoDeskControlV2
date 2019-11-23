@@ -38,6 +38,8 @@ private slots:
 
     void onColorChanged();
 
+    void on_bSave_clicked();
+
 private:
     Ui::ModeStaticSettingsDialog *ui;
     QColor m_color;

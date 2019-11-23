@@ -12,3 +12,8 @@ ApplicationSettingsDialog::~ApplicationSettingsDialog()
 {
     delete ui;
 }
+
+void ApplicationSettingsDialog::on_pushButton_clicked()
+{
+    close();
+}

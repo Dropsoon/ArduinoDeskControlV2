@@ -15,6 +15,9 @@ public:
     explicit ApplicationSettingsDialog(QWidget *parent = nullptr);
     ~ApplicationSettingsDialog();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::ApplicationSettingsDialog *ui;
 };
