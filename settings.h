@@ -15,6 +15,8 @@ public:
     void store_line(std::string key, std::string value);
     void load_file(std::string filename);
     std::string get_setting(std::string name);
+    bool set_setting(std::string key, std::string value);
+    bool save_file(std::string filename);
 
     int savedstring = 0;
     std::string savedkey[32];

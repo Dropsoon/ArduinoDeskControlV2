@@ -48,3 +48,25 @@ std::string settings::get_setting(std::string name)
     }
     return "error";
 }
+
+bool settings::set_setting(std::string key, std::string value)
+{
+    for (int i=0; i<savedstring; i++) {
+        if(key == savedkey[i]){
+            savedvalue[i] = value;
+            return false;
+        }
+    }
+    return true;
+}
+
+bool settings::save_file(std::string filename)
+{
+    std::fstream file(filename, std::ios::out | std::ios::trunc);
+    for (int i=0; i<savedstring; i++) {
+        file << savedkey[i] << "=" << savedvalue[i] << std::endl;
+    }
+    file.close();
+    return false;
+}
+
