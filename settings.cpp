@@ -21,7 +21,11 @@ void settings::store_line(std::string key, std::string value)
 void settings::load_file(std::string filename)
 {
 
-
+    savedstring = 0;
+    for(int i=0; i<32; i++){
+        savedkey[i] = "";
+        savedvalue[i] = "";
+    }
     std::fstream filea(filename, std::ios::out | std::ios::app); //create file if not exist
     filea.close();
 

@@ -115,3 +115,22 @@ void MainWindow::on_bRefresh_clicked()
       ui->cSelectPort->addItem(devices.at(i).portName());
     }
 }
+
+void MainWindow::on_bModeStatic_clicked()
+{/*
+    serial.write(settingsf.get_setting("customred").c_str());
+    serial.write(settingsf.get_setting("customgreen").c_str());
+    serial.write(settingsf.get_setting("customblue").c_str());*/
+    settingsf.load_file("settings.txt");
+    std::string tmp = "0 " + settingsf.get_setting("customred") + " " + settingsf.get_setting("customgreen") + " "  + settingsf.get_setting("customblue") + "\n";
+    const char *tmp2 = tmp.c_str();
+    serial.write(tmp2);
+}
+
+void MainWindow::on_bModeRainbow_clicked()
+{
+    settingsf.load_file("settings.txt");
+    std::string tmp = "1";
+    const char *tmp2 = tmp.c_str();
+    serial.write(tmp2);
+}

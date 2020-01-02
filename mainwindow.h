@@ -55,6 +55,10 @@ private slots:
 
     void on_bRefresh_clicked();
 
+    void on_bModeStatic_clicked();
+
+    void on_bModeRainbow_clicked();
+
 private:
     Ui::MainWindow *ui;
 
